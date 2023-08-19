@@ -27,6 +27,10 @@ app.use(morgan("dev"));
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/blog", blogRoutes);
 
+app.get("/", (req, res)=>{
+  res.json('Server is Live');
+})
+
 // Port
 const PORT = process.env.PORT || 8080;
 //listen
